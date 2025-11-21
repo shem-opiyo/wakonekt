@@ -1,7 +1,7 @@
 # wakonekt <br> <br>
 🕊️ JusticeConnect — AI-Powered Legal Access Platform
 
-Promoting Social Justice through Technology (SDG 16: Peace, Justice, and Strong Institutions)
+Promoting Social Justice through Technology (SDG 16: Peace, Justice, and Strong Institutions)  
 ###Pitch Deck:
 ```
 https://www.canva.com/design/DAG5VoYCT8A/_RYIzhX4v9o1qcG5iKiqsQ/edit
