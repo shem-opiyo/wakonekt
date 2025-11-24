@@ -12,11 +12,11 @@ export default function Header() {
 
         <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
-          <Link to="/clients" className={location.pathname === '/clients' ? 'active' : ''}>For Clients</Link>
-          <Link to="/lawyers" className={location.pathname === '/lawyers' ? 'active' : ''}>For Lawyers</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/get-help">
-            <button className="btn-primary">Get Legal Help</button>
+          {/* <Link to="/clients" className={location.pathname === '/clients' ? 'active' : ''}>For Clients</Link>
+          <Link to="/lawyers" className={location.pathname === '/lawyers' ? 'active' : ''}>For Lawyers</Link> */}
+          {/* <Link to="/contact">Contact</Link> */}
+          <Link to="/login">
+            <button className="btn-primary">Get / Provide Legal Help</button>
           </Link>
         </nav>
       </div>

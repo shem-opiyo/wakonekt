@@ -7,6 +7,8 @@ import LoginPage from './pages/LoginPage';
 import ClientDashboard from './pages/ClientDashboard';
 import LawyerDashboard from './pages/LawyerDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import ChatPage from './pages/ChatPage';
+
 
 export default function App() {
   return (
@@ -21,10 +23,18 @@ export default function App() {
           <ClientDashboard />
         </ProtectedRoute>
       } />
+      
 
       <Route path="/lawyer-dashboard" element={
         <ProtectedRoute allowedRole="lawyer">
           <LawyerDashboard />
+        </ProtectedRoute>
+      } />
+
+      {/* NEW: Chat page — accessible only to logged-in users */}
+      <Route path="/chat/:caseId" element={
+        <ProtectedRoute>
+          <ChatPage />
         </ProtectedRoute>
       } />
 

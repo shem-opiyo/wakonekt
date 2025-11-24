@@ -1,0 +1,48 @@
+// src/context/CasesContext.jsx
+import { createContext, useContext, useState } from 'react';
+
+const CasesContext = createContext();
+
+export function CasesProvider({ children }) {
+  // Mock cases — in real app, fetch from API on login
+  const [cases, setCases] = useState([
+    {
+      id: 'case-001',
+      title: 'Land Dispute – Karen',
+      status: 'active',
+      junior: { name: 'Alex Kimani', avatar: 'A' },
+      senior: { name: 'Dr. Jane Mwangi' },
+      lastMessage: 'I’ve reviewed the title deed you sent...',
+      updatedAt: '2 hours ago',
+      unread: 3
+    },
+    {
+      id: 'case-002',
+      title: 'Employment Termination',
+      status: 'active',
+      junior: { name: 'Sarah Ochieng', avatar: 'S' },
+      senior: { name: 'Adv. Peter Njoroge' },
+      lastMessage: 'Thank you. I’ll draft the demand letter today.',
+      updatedAt: 'yesterday',
+      unread: 0
+    },
+    {
+      id: 'case-003',
+      title: 'Child Custody Agreement',
+      status: 'closed',
+      junior: { name: 'Alex Kimani', avatar: 'A' },
+      senior: { name: 'Dr. Jane Mwangi' },
+      lastMessage: 'Case successfully resolved. Thank you!',
+      updatedAt: '1 week ago',
+      unread: 0
+    }
+  ]);
+
+  return (
+    <CasesContext.Provider value={{ cases, setCases }}>
+      {children}
+    </CasesContext.Provider>
+  );
+}
+
+export const useCases = () => useContext(CasesContext);

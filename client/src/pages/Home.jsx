@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import FloatingBar from '../components/FloatingBar';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -12,17 +13,19 @@ export default function Home() {
         position: 'relative'
       }}>
         <div className="container" style={{textAlign:'center', padding: '10rem 0'}}>
-          <h1 style={{fontSize:'3.8rem', marginBottom:'1rem'}}>wakonekt, Powered by AI.</h1>
+          <h1 style={{fontSize:'3.8rem', marginBottom:'1rem'}}>Wakonekt, Great Probono Services.</h1>
           <p style={{fontSize:'1.4rem', maxWidth:'800px', margin:'0 auto 3rem', opacity:0.9}}>
-            Connect with experienced lawyers dedicated to social justice. Our AI agent will help you find the right legal support for your case.
+            Connect with experienced lawyers dedicated to social justice. Our team of lawyers will help you find the right legal support for your case.
           </p>
+          <Link to="/Login">
           <button style={{
             background:'#ffd60a', color:'#000', padding:'1rem 3rem',
             fontSize:'1.3rem', fontWeight:'bold', border:'none',
             borderRadius:'50px', cursor:'pointer'
           }}>
-            Talk to our AI Agent
+             Talk to a Lawyer
           </button>
+          </Link>
         </div>
       </div>
 
@@ -46,7 +49,7 @@ export default function Home() {
         </div>
       </section>
 
-      <FloatingBar />
+      {/* <FloatingBar /> */}
     </>
   );
 }

@@ -59,7 +59,7 @@ export default function LawyerDashboard() {
           </div>
         </div>
       </div>
-      <FloatingBar />
+      {/* <FloatingBar /> */}
     </>
   );
 }

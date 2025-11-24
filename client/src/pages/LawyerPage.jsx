@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import FloatingBar from '../components/FloatingBar';
+import { Link } from 'react-router-dom';
 
 export default function LawyerPage() {
   return (
@@ -14,9 +15,11 @@ export default function LawyerPage() {
             <p style={{fontSize:'1.2rem', marginBottom:'2.5rem', opacity:0.9}}>
               Connect with clients who need you most and make a real difference in your community.
             </p>
+            <Link to="/login">
             <button className="btn-primary" style={{fontSize:'1.2rem', padding:'1rem 2.5rem'}}>
               Join Now
             </button>
+            </Link>
           </div>
 
           <div style={{
@@ -33,17 +36,19 @@ export default function LawyerPage() {
               <input type="text" placeholder="Enter your email or username" style={inputStyle} />
               <input type="password" placeholder="Enter your password" style={inputStyle} />
               <a href="#" style={{alignSelf:'flex-end', color:'#6e44ff', fontSize:'0.9rem'}}>Forgot Password?</a>
+              <Link to="/Login">
               <button type="submit" style={{
                 background:'#6e44ff', color:'white', padding:'1rem',
                 border:'none', borderRadius:'10px', fontSize:'1.1rem', fontWeight:'bold'
               }}>
                 Login to Dashboard
               </button>
+              </Link>
             </form>
           </div>
         </div>
       </div>
-      <FloatingBar />
+      {/* <FloatingBar /> */}
     </>
   );
 }

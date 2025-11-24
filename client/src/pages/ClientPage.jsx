@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import FloatingBar from '../components/FloatingBar';
+import { Link } from 'react-router-dom';
 
 export default function ClientPage() {
   return (
@@ -12,7 +13,7 @@ export default function ClientPage() {
           <div style={{display:'flex', justifyContent:'center', gap:'3rem', margin:'4rem 0', flexWrap:'wrap'}}>
             {[
               {icon:"Chat", title:"Tell Us Your Story", desc:"Describe your legal issue to our AI assistant in your own words."},
-              {icon:"AI", title:"AI Analysis", desc:"Our AI understands and categorizes your case to find the best-suited legal professionals."},
+              // {icon:"AI", title:"AI Analysis", desc:"Our AI understands and categorizes your case to find the best-suited legal professionals."},
               {icon:"Handshake", title:"Connect with a Lawyer", desc:"We'll match you with a qualified lawyer who can help with your specific needs."},
               {icon:"Dashboard", title:"Manage Your Case", desc:"Use your client dashboard to track your case progress and communicate with your lawyer."}
             ].map((item, i) => (
@@ -28,14 +29,16 @@ export default function ClientPage() {
           </div>
 
           <div style={{marginTop:'4rem'}}>
-            <h2 style={{fontSize:'2.2rem', marginBottom:'1.5rem'}}>Ready to Start? Talk to Our AI Assistant</h2>
+            <h2 style={{fontSize:'2.2rem', marginBottom:'1.5rem'}}>Ready to Start? Talk to Our Lawyers</h2>
+            <Link to="/login">
             <button className="btn-primary" style={{fontSize:'1.2rem', padding:'1rem 3rem'}}>
               Start Now
             </button>
+            </Link>
           </div>
         </div>
       </div>
-      <FloatingBar />
+      {/* <FloatingBar /> */}
     </>
   );
 }
