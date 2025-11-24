@@ -1,6 +1,17 @@
 # Please bear with me, this project will be done by 26th evening , 5.00 pm EAT.
 
 <br><br><br><br><br>
+## Home Page
+![home page](images/homepage.png)
+
+## Login Page
+![login page](images/login_page.png)
+
+## Client Dashboard
+![client dashboard](images/client_dashboard.png)
+## lawyer dashboard
+![lawyer dashboard](images/lawyer_dashboard.png)
+
 # Wakonekt 
 ## Free Pro-Bono Legal Aid Platform
 Connecting indigent clients with senior advocates and supervised junior legal assistants.
